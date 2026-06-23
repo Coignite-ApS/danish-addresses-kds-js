@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Affaldsshop kasse — staged Adressevælger (KDS) replica</title>
+  <style>
+    :root { --line:#d9d9d9; --muted:#777; }
+    * { box-sizing: border-box; }
+    body { font: 15px/1.5 -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0; background: #f5f5f5; color: #222; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 28px 18px 80px; }
+    h1 { font-size: 22px; }
+    h3 { margin-top: 26px; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+    .note { color: var(--muted); font-size: 13px; }
+    .field { margin: 14px 0; position: relative; }
+    label { display: block; font-weight: 600; margin-bottom: 4px; }
+    label small { font-weight: 400; color: var(--muted); }
+    input[type=text] { width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; font-size: 15px; }
+    input.locked { background: #f0f0f0; color: #555; }
+    .config { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; margin: 18px 0; }
+    .config select { padding: 6px 8px; font-size: 14px; }
+    .out { font-family: ui-monospace, Menlo, monospace; font-size: 12px; background: #1e1e1e; color: #d4d4d4; padding: 12px; border-radius: 8px; white-space: pre-wrap; margin-top: 20px; min-height: 64px; }
+    .pill { display:inline-block; background:#eef; border:1px solid #ccd; border-radius: 99px; padding: 2px 10px; font-size:12px; margin-left:6px;}
+
+    /* Same class names the old dawa-autocomplete2 CSS used. */
+    .dawa-autocomplete-suggestions {
+      position: absolute; left: 0; right: 0; z-index: 50; list-style: none; margin: 2px 0 0; padding: 0;
+      background: #fff; border: 1px solid var(--line); border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,.12);
+      max-height: 300px; overflow: auto;
+    }
+    .dawa-autocomplete-suggestion { padding: 9px 12px; cursor: pointer; border-bottom: 1px solid #f0f0f0; }
+    .dawa-autocomplete-suggestion:last-child { border-bottom: 0; }
+    .dawa-autocomplete-suggestion.dawa-selected,
+    .dawa-autocomplete-suggestion:hover { background: #eaf3ff; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Kasse — staged Adressevælger <span class="pill">KDS · street → house → apartment</span></h1>
+    <p class="note">
+      Loads the real <code>dist/affaldsshop-checkout.&lt;ver&gt;.js</code> IIFE against
+      <code>adressevaelger.dk</code>. Type a street (e.g. <em>Akseltorv</em>) → pick the street → pick a house →
+      (apartment buildings) pick a floor/door. By &amp; Postnummer fill and lock; Nomi4s also fills Kommune.
+    </p>
+
+    <div class="config">
+      <label for="muni">Kommune (config):</label>
+      <select id="muni">
+        <option value="621">621 — Kolding (skabelon)</option>
+        <option value="561">561 — Esbjerg</option>
+        <option value="573">573 — Varde (dinforsyning)</option>
+        <option value="480">480 — Nordfyns</option>
+        <option value="791">791 — Viborg (revas)</option>
+        <option value="787">787 — Thisted</option>
+        <option value="661,665,671,779">661,665,671,779 — Nomi4s (multi + Kommune field)</option>
+        <option value="">(hele landet)</option>
+      </select>
+      <span class="note">Changing reloads with a new <code>kommuneKode</code>.</span>
+    </div>
+
+    <form id="checkout" autocomplete="off" onsubmit="return false">
+      <h3>Dine oplysninger</h3>
+      <div class="field">
+        <label for="billing_address_1">Gadenavn og nr <small>— vælg fra liste</small></label>
+        <input type="text" id="billing_address_1" name="billing_address_1" autocomplete="list" required>
+      </div>
+      <div class="field">
+        <label for="billing_city">By <small>— hentes automatisk</small></label>
+        <input type="text" id="billing_city" name="billing_city" class="locked" required>
+      </div>
+      <div class="field">
+        <label for="billing_postcode">Postnummer <small>— hentes automatisk</small></label>
+        <input type="text" id="billing_postcode" name="billing_postcode" class="locked" required>
+      </div>
+      <div class="field" id="muniNameField" style="display:none">
+        <label for="order_municipality_name">Kommune <small>— fyldes hvis feltet findes (Nomi4s)</small></label>
+        <input type="text" id="order_municipality_name" name="order_municipality_name" class="locked">
+      </div>
+    </form>
+
+    <div class="out" id="out">Valgt adresse vises her…</div>
+  </div>
+
+  <!-- Per-site config BEFORE the widget loads (the widget reads it at boot). -->
+  <script>
+    var startKode = "621";
+    var _m = /kommune=([^&]*)/.exec(location.hash);
+    if (_m) {
+      startKode = decodeURIComponent(_m[1]);
+      document.getElementById("muni").value = startKode;
+      if (startKode === "661,665,671,779") document.getElementById("muniNameField").style.display = "block";
+    }
+    window.AFFALDSSHOP_ADDRESS_CONFIG = { municipalityCode: startKode, minLength: 2 };
+  </script>
+  <script src="../dist/affaldsshop-checkout.0.1.0.js"></script>
+
+  <!-- Demo glue: reload on kommune change + reflect the filled fields. Not part of the widget. -->
+  <script>
+    var out = document.getElementById("out");
+    document.getElementById("muni").addEventListener("change", function () {
+      location.hash = "kommune=" + encodeURIComponent(this.value);
+      location.reload();
+    });
+    function dump() {
+      out.textContent = JSON.stringify({
+        billing_address_1: v("billing_address_1"),
+        billing_city: v("billing_city"),
+        billing_postcode: v("billing_postcode"),
+        order_municipality_name: v("order_municipality_name"),
+      }, null, 2);
+    }
+    function v(id) { var e = document.getElementById(id); return e ? e.value : undefined; }
+    // poll lightly so the demo readout updates after the widget fills fields
+    setInterval(dump, 400);
+  </script>
+</body>
+</html>
