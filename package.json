@@ -1,6 +1,6 @@
 {
   "name": "@coignite/danish-addresses-kds-js",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Klimadatastyrelsen (KDS) Adressevælger client + framework-agnostic address autocomplete (DAWA replacement).",
   "type": "module",
   "main": "./dist/index.mjs",
@@ -33,6 +33,14 @@
   },
   "author": "Coignite",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coignite-ApS/danish-addresses-kds-js.git"
+  },
+  "homepage": "https://github.com/Coignite-ApS/danish-addresses-kds-js#readme",
+  "bugs": {
+    "url": "https://github.com/Coignite-ApS/danish-addresses-kds-js/issues"
+  },
   "publishConfig": {
     "access": "public"
   }
