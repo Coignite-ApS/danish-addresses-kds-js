@@ -1,0 +1,99 @@
+{
+  "source": "GET /adresser/0a3f50bb-f9ac-32b8-e044-0003ba298018",
+  "recorded": "2026-10-12",
+  "body": {
+    "status": "ok",
+    "adresse": {
+      "id_lokalid": "0a3f50bb-f9ac-32b8-e044-0003ba298018",
+      "adressebetegnelse": "Fredericiagade 16, st., 6000 Kolding",
+      "etagebetegnelse": "st",
+      "doerbetegnelse": null,
+      "status": "3",
+      "virkningfra": "2019-08-19T08:26:14.741Z",
+      "virkningtil": null,
+      "registreringfra": "2019-08-19T08:26:14.741Z",
+      "registreringtil": null,
+      "husnummer": {
+        "id_lokalid": "0a3f5090-26ac-32b8-e044-0003ba298018",
+        "husnummertekst": "16",
+        "adgangsadressebetegnelse": "Fredericiagade 16, 6000 Kolding",
+        "vejnavn": "Fredericiagade",
+        "status": "3",
+        "virkningfra": "2019-08-19T08:26:30.648178+00:00",
+        "virkningtil": null,
+        "registreringfra": "2019-08-19T08:26:30.648178+00:00",
+        "registreringtil": null,
+        "adgangspunkt": {
+          "id_lokalid": "0a3f5090-26ac-32b8-e044-0003ba298018",
+          "status": "8",
+          "virkningfra": "2019-08-19T08:26:14.741456+00:00",
+          "virkningtil": null,
+          "registreringfra": "2019-08-19T08:26:14.741456+00:00",
+          "registreringtil": null,
+          "geometri": {
+            "type": "Point",
+            "crs": {
+              "type": "name",
+              "properties": {
+                "name": "EPSG:25832"
+              }
+            },
+            "coordinates": [
+              530246.92,
+              6149532.77
+            ]
+          },
+          "koordinater": {
+            "x": 530246.92,
+            "y": 6149532.77
+          }
+        },
+        "postnummer": {
+          "id_lokalid": "3a6b09ec-cfd7-4cc9-8eed-d9f3f0e4978a",
+          "navn": "Kolding",
+          "postnr": "6000",
+          "status": "3",
+          "virkningfra": "2023-03-24T16:23:10.278819+00:00",
+          "virkningtil": null,
+          "registreringfra": "2023-03-24T16:23:10.278819+00:00",
+          "registreringtil": null
+        },
+        "navngivenvej": {
+          "id_lokalid": "cc88927d-b6f4-442a-aad0-b03d2a4ef077",
+          "vejnavn": "Fredericiagade",
+          "virkningfra": "2021-01-14T13:59:28.672235+00:00",
+          "virkningtil": null,
+          "registreringfra": "2021-01-14T13:59:28.672235+00:00",
+          "registreringtil": null
+        },
+        "navngivenvejkommunedel": {
+          "id_lokalid": "5cb37774-4eae-11e8-93fd-066cff24d637",
+          "kommune": "0621",
+          "vejkode": "2555",
+          "navngivenvej": "cc88927d-b6f4-442a-aad0-b03d2a4ef077",
+          "virkningfra": "2021-01-14T13:59:28.672235+00:00",
+          "virkningtil": null,
+          "registreringfra": "2021-01-14T13:59:28.672235+00:00",
+          "registreringtil": null
+        },
+        "navngivenvejpostnummer": {
+          "id_lokalid": "0fb77155-f69c-4863-84fe-8900e9aa51fc",
+          "virkningfra": "2020-12-18T15:17:19.000774+00:00",
+          "virkningtil": null,
+          "registreringfra": "2020-12-18T15:17:19.000774+00:00",
+          "registreringtil": null
+        },
+        "supplerendebynavn": {
+          "id_lokalid": null,
+          "status": null,
+          "supplerendebynavn": null,
+          "navn": null,
+          "virkningfra": null,
+          "virkningtil": null,
+          "registreringfra": null,
+          "registreringtil": null
+        }
+      }
+    }
+  }
+}

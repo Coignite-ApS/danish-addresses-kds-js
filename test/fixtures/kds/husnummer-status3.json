@@ -1,0 +1,88 @@
+{
+  "source": "GET /husnumre/0a3f5090-0ebe-32b8-e044-0003ba298018",
+  "recorded": "2026-10-12",
+  "body": {
+    "status": "ok",
+    "husnummer": {
+      "id_lokalid": "0a3f5090-0ebe-32b8-e044-0003ba298018",
+      "husnummertekst": "1",
+      "adgangsadressebetegnelse": "Akseltorv 1, 6000 Kolding",
+      "vejnavn": "Akseltorv",
+      "status": "3",
+      "virkningfra": "2021-05-07T09:35:54.016Z",
+      "virkningtil": null,
+      "registreringfra": "2021-05-07T09:35:54.016Z",
+      "registreringtil": null,
+      "adgangspunkt": {
+        "id_lokalid": "0a3f5090-0ebe-32b8-e044-0003ba298018",
+        "status": "8",
+        "virkningfra": "2020-01-10T11:14:37.591751+00:00",
+        "virkningtil": null,
+        "registreringfra": "2020-01-10T11:14:37.591751+00:00",
+        "registreringtil": null,
+        "geometri": {
+          "type": "Point",
+          "crs": {
+            "type": "name",
+            "properties": {
+              "name": "EPSG:25832"
+            }
+          },
+          "coordinates": [
+            529904.75,
+            6149462.53
+          ]
+        },
+        "koordinater": {
+          "x": 529904.75,
+          "y": 6149462.53
+        }
+      },
+      "postnummer": {
+        "id_lokalid": "3a6b09ec-cfd7-4cc9-8eed-d9f3f0e4978a",
+        "navn": "Kolding",
+        "postnr": "6000",
+        "status": "3",
+        "virkningfra": "2023-03-24T16:23:10.278819+00:00",
+        "virkningtil": null,
+        "registreringfra": "2023-03-24T16:23:10.278819+00:00",
+        "registreringtil": null
+      },
+      "navngivenvej": {
+        "id_lokalid": "3394a105-ed81-4a4c-ab4d-a37ea0303711",
+        "vejnavn": "Akseltorv",
+        "virkningfra": "2026-04-25T14:35:26.984963+00:00",
+        "virkningtil": null,
+        "registreringfra": "2026-04-25T14:35:26.984963+00:00",
+        "registreringtil": null
+      },
+      "navngivenvejkommunedel": {
+        "id_lokalid": "5cb3119d-4eae-11e8-93fd-066cff24d637",
+        "kommune": "0621",
+        "vejkode": "0230",
+        "navngivenvej": "3394a105-ed81-4a4c-ab4d-a37ea0303711",
+        "virkningfra": "2026-04-25T14:35:26.984963+00:00",
+        "virkningtil": null,
+        "registreringfra": "2026-04-25T14:35:26.984963+00:00",
+        "registreringtil": null
+      },
+      "navngivenvejpostnummer": {
+        "id_lokalid": "f15c5d07-0bfe-4535-ba18-352cf25daf41",
+        "virkningfra": "2020-12-18T15:17:19.000774+00:00",
+        "virkningtil": null,
+        "registreringfra": "2020-12-18T15:17:19.000774+00:00",
+        "registreringtil": null
+      },
+      "supplerendebynavn": {
+        "id_lokalid": null,
+        "status": null,
+        "supplerendebynavn": null,
+        "navn": null,
+        "virkningfra": null,
+        "virkningtil": null,
+        "registreringfra": null,
+        "registreringtil": null
+      }
+    }
+  }
+}

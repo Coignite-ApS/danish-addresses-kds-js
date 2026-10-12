@@ -1,0 +1,99 @@
+{
+  "source": "GET /adresser/0a3f509d-db78-32b8-e044-0003ba298018",
+  "recorded": "2026-10-12",
+  "body": {
+    "status": "ok",
+    "adresse": {
+      "id_lokalid": "0a3f509d-db78-32b8-e044-0003ba298018",
+      "adressebetegnelse": "Edvard Thomsens Vej 87, 5. th, 2300 København S",
+      "etagebetegnelse": "5",
+      "doerbetegnelse": "th",
+      "status": "3",
+      "virkningfra": "2005-07-27T13:43:13.000Z",
+      "virkningtil": null,
+      "registreringfra": "2018-05-03T16:58:34.000Z",
+      "registreringtil": null,
+      "husnummer": {
+        "id_lokalid": "0a3f507a-60f0-32b8-e044-0003ba298018",
+        "husnummertekst": "87",
+        "adgangsadressebetegnelse": "Edvard Thomsens Vej 87, 2300 København S",
+        "vejnavn": "Edvard Thomsens Vej",
+        "status": "3",
+        "virkningfra": "2024-12-01T02:07:33.038995+00:00",
+        "virkningtil": null,
+        "registreringfra": "2024-12-01T02:07:33.038995+00:00",
+        "registreringtil": null,
+        "adgangspunkt": {
+          "id_lokalid": "0a3f507a-60f0-32b8-e044-0003ba298018",
+          "status": "8",
+          "virkningfra": "2009-11-25T00:07:37+00:00",
+          "virkningtil": null,
+          "registreringfra": "2018-05-03T16:58:34+00:00",
+          "registreringtil": null,
+          "geometri": {
+            "type": "Point",
+            "crs": {
+              "type": "name",
+              "properties": {
+                "name": "EPSG:25832"
+              }
+            },
+            "coordinates": [
+              725303.93,
+              6170990.69
+            ]
+          },
+          "koordinater": {
+            "x": 725303.93,
+            "y": 6170990.69
+          }
+        },
+        "postnummer": {
+          "id_lokalid": "7005971d-ad67-41a0-a1d3-4312f841e3ae",
+          "navn": "København S",
+          "postnr": "2300",
+          "status": "3",
+          "virkningfra": "2023-03-24T18:23:45.596797+00:00",
+          "virkningtil": null,
+          "registreringfra": "2023-03-24T18:23:45.596797+00:00",
+          "registreringtil": null
+        },
+        "navngivenvej": {
+          "id_lokalid": "c4fd9155-2383-4833-8895-41ef97303f26",
+          "vejnavn": "Edvard Thomsens Vej",
+          "virkningfra": "2026-04-23T20:10:57.225311+00:00",
+          "virkningtil": null,
+          "registreringfra": "2026-04-23T20:10:57.225311+00:00",
+          "registreringtil": null
+        },
+        "navngivenvejkommunedel": {
+          "id_lokalid": "5c98e04f-4eae-11e8-93fd-066cff24d637",
+          "kommune": "0101",
+          "vejkode": "1442",
+          "navngivenvej": "c4fd9155-2383-4833-8895-41ef97303f26",
+          "virkningfra": "2026-04-23T20:10:57.225311+00:00",
+          "virkningtil": null,
+          "registreringfra": "2026-04-23T20:10:57.225311+00:00",
+          "registreringtil": null
+        },
+        "navngivenvejpostnummer": {
+          "id_lokalid": "223f572e-a67e-440f-bd4d-7c839f1abff0",
+          "virkningfra": "2020-12-18T15:17:19.000774+00:00",
+          "virkningtil": null,
+          "registreringfra": "2020-12-18T15:17:19.000774+00:00",
+          "registreringtil": null
+        },
+        "supplerendebynavn": {
+          "id_lokalid": null,
+          "status": null,
+          "supplerendebynavn": null,
+          "navn": null,
+          "virkningfra": null,
+          "virkningtil": null,
+          "registreringfra": null,
+          "registreringtil": null
+        }
+      }
+    }
+  }
+}

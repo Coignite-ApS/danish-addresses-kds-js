@@ -1,0 +1,88 @@
+{
+  "source": "GET /husnumre/0a3f508d-b070-32b8-e044-0003ba298018",
+  "recorded": "2026-10-12",
+  "body": {
+    "status": "ok",
+    "husnummer": {
+      "id_lokalid": "0a3f508d-b070-32b8-e044-0003ba298018",
+      "husnummertekst": "4",
+      "adgangsadressebetegnelse": "Rudholmvej 4, Søhale, 6715 Esbjerg N",
+      "vejnavn": "Rudholmvej",
+      "status": "3",
+      "virkningfra": "2018-07-04T16:00:00.000Z",
+      "virkningtil": null,
+      "registreringfra": "2018-07-04T16:00:00.000Z",
+      "registreringtil": null,
+      "adgangspunkt": {
+        "id_lokalid": "0a3f508d-b070-32b8-e044-0003ba298018",
+        "status": "8",
+        "virkningfra": "2009-11-24T02:15:25+00:00",
+        "virkningtil": null,
+        "registreringfra": "2018-05-03T16:58:34+00:00",
+        "registreringtil": null,
+        "geometri": {
+          "type": "Point",
+          "crs": {
+            "type": "name",
+            "properties": {
+              "name": "EPSG:25832"
+            }
+          },
+          "coordinates": [
+            473159.14,
+            6155658.06
+          ]
+        },
+        "koordinater": {
+          "x": 473159.14,
+          "y": 6155658.06
+        }
+      },
+      "postnummer": {
+        "id_lokalid": "81211ac3-71c3-4907-a0dd-10a5c994cf84",
+        "navn": "Esbjerg N",
+        "postnr": "6715",
+        "status": "3",
+        "virkningfra": "2023-03-24T15:44:08.352008+00:00",
+        "virkningtil": null,
+        "registreringfra": "2023-03-24T15:44:08.352008+00:00",
+        "registreringtil": null
+      },
+      "navngivenvej": {
+        "id_lokalid": "a36a751b-f7ad-49f8-a432-2261d7f9904c",
+        "vejnavn": "Rudholmvej",
+        "virkningfra": "2024-06-27T15:03:33.345669+00:00",
+        "virkningtil": null,
+        "registreringfra": "2024-06-27T15:03:33.345669+00:00",
+        "registreringtil": null
+      },
+      "navngivenvejkommunedel": {
+        "id_lokalid": "5cb03fe1-4eae-11e8-93fd-066cff24d637",
+        "kommune": "0561",
+        "vejkode": "6533",
+        "navngivenvej": "a36a751b-f7ad-49f8-a432-2261d7f9904c",
+        "virkningfra": "1995-06-14T14:31:00+00:00",
+        "virkningtil": null,
+        "registreringfra": "2018-05-03T16:58:34+00:00",
+        "registreringtil": null
+      },
+      "navngivenvejpostnummer": {
+        "id_lokalid": "82e8df40-09c9-4f1c-93e9-f3ce973550d9",
+        "virkningfra": "2020-12-18T15:17:19.000774+00:00",
+        "virkningtil": null,
+        "registreringfra": "2020-12-18T15:17:19.000774+00:00",
+        "registreringtil": null
+      },
+      "supplerendebynavn": {
+        "id_lokalid": "af0aa82f-a6a5-4df5-bab8-43f723028ab9",
+        "status": "3",
+        "supplerendebynavn": "658689",
+        "navn": "Søhale",
+        "virkningfra": "2023-03-24T22:04:51.8425+00:00",
+        "virkningtil": null,
+        "registreringfra": "2023-03-24T22:04:51.8425+00:00",
+        "registreringtil": null
+      }
+    }
+  }
+}

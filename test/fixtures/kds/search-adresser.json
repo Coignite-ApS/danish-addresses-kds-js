@@ -1,0 +1,34 @@
+{
+  "source": "GET /adresser/soeg?tekst=Fredericiagade%2016%2C%206000&maksimum=5&medtagForeloebige=true",
+  "recorded": "2026-10-12",
+  "body": {
+    "status": "ok",
+    "beskrivelse": "",
+    "fund": [
+      {
+        "type": "adresse",
+        "id": "0251159a-6416-4d4b-937a-ef788240ebe6",
+        "titel": "Fredericiagade 16, 6000 Kolding",
+        "husnummerId": "0a3f5090-26ac-32b8-e044-0003ba298018"
+      },
+      {
+        "type": "adresse",
+        "id": "0a3f50bb-f9ac-32b8-e044-0003ba298018",
+        "titel": "Fredericiagade 16, st., 6000 Kolding",
+        "husnummerId": "0a3f5090-26ac-32b8-e044-0003ba298018"
+      },
+      {
+        "type": "adresse",
+        "id": "0a3f50bb-f9ad-32b8-e044-0003ba298018",
+        "titel": "Fredericiagade 16, 1., 6000 Kolding",
+        "husnummerId": "0a3f5090-26ac-32b8-e044-0003ba298018"
+      },
+      {
+        "type": "adresse",
+        "id": "0a3f50bb-f9ae-32b8-e044-0003ba298018",
+        "titel": "Fredericiagade 16, 2., 6000 Kolding",
+        "husnummerId": "0a3f5090-26ac-32b8-e044-0003ba298018"
+      }
+    ]
+  }
+}

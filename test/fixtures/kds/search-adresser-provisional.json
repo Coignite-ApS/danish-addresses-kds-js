@@ -1,0 +1,53 @@
+{
+  "source": "GET /adresser/soeg?tekst=Landem%C3%A6rket%2027&maksimum=20&medtagForeloebige=true",
+  "recorded": "2026-10-12",
+  "body": {
+    "status": "ok",
+    "beskrivelse": "",
+    "fund": [
+      {
+        "type": "husnummer",
+        "id": "0a3f507a-b2c7-32b8-e044-0003ba298018",
+        "titel": "Landemærket 27, 1119 København K",
+        "vejnavn": "Landemærket",
+        "husnummer": "27"
+      },
+      {
+        "type": "adresse",
+        "id": "0a3f50b1-ff45-32b8-e044-0003ba298018",
+        "titel": "Landemærket 27, Rønne, 3700 Rønne",
+        "husnummerId": "0a3f5087-7c88-32b8-e044-0003ba298018"
+      },
+      {
+        "type": "adresse",
+        "id": "0a3f50af-3766-32b8-e044-0003ba298018",
+        "titel": "Landemærket 27, Yderby Lyng, 4583 Sjællands Odde",
+        "husnummerId": "0a3f5084-da72-32b8-e044-0003ba298018"
+      },
+      {
+        "type": "adresse",
+        "id": "49805dbf-e7ba-4daf-97af-f547033d70d5",
+        "titel": "Landemærket 27, 6715 Esbjerg N",
+        "husnummerId": "ca14f920-396e-4d4a-9eb0-9f4cbfb0f56f"
+      },
+      {
+        "type": "adresse",
+        "id": "8be24232-0806-4633-b420-2df201c2453a",
+        "titel": "Landemærket 27A, 1119 København K",
+        "husnummerId": "248dc28d-8edb-41eb-8371-d926caac41b1"
+      },
+      {
+        "type": "adresse",
+        "id": "8de3c401-9a27-4f96-9f43-ce5735453bc0",
+        "titel": "Landemærket 27B, 1119 København K",
+        "husnummerId": "84f51ba2-6038-465f-bc4e-03ade23b758e"
+      },
+      {
+        "type": "adresse",
+        "id": "b396f3ab-d179-45e5-80b3-618eb5d60e4a",
+        "titel": "Landemærket 27F, 1119 København K",
+        "husnummerId": "000a8fad-b0c1-4169-8289-134847bf908e"
+      }
+    ]
+  }
+}

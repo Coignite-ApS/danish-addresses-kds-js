@@ -25,7 +25,7 @@
   "scripts": {
     "build": "node build.mjs",
     "prepublishOnly": "node build.mjs",
-    "test": "node --test test/autocomplete.test.js test/client.test.js",
+    "test": "node --test test/autocomplete.test.js test/client.test.js test/golden.test.js",
     "test:live": "node --test test/client.live.test.js"
   },
   "devDependencies": {
