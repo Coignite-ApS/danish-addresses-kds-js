@@ -43,7 +43,7 @@ export function createClient(opts = {}) {
    * Search. `resource` is 'adresser' (full addresses incl. floor/door) or 'husnumre' (access addresses).
    * Provide EITHER `tekst` (free-text) OR `vejnavn` (structured; required for husnummer/postnummer/etage/doer).
    * Returns the raw `fund[]` rows (minimal: id, type, titel, ...), untouched. KDS sends no `status` on hits
- * (verified 2026-10-12); if it ever does, it passes through as-is (string, as KDS sends it).
+   * (verified 2026-10-12); if it ever does, it passes through as-is (string, as KDS sends it).
    */
   // English option names are canonical; the Danish API names are accepted as aliases (KDS-doc parity).
   // resource: 'addresses' (full addresses, incl. floor/door) | 'accessAddresses' (house numbers).
