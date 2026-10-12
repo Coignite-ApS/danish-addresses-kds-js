@@ -47,3 +47,12 @@ test("resolve(id) round-trips a husnummer id to a normalized address", async () 
   assert.equal(m.municipality_name, "Kolding");
   assert.ok(m.position && m.position.coordinates[0] > 7 && m.position.coordinates[0] < 16);
 });
+
+test("lookupById returns DAR status (provisional 2, current 3); search hits still carry none", async () => {
+  const prov = await client.lookupById("b396f3ab-d179-45e5-80b3-618eb5d60e4a"); // Landemærket 27F, foreløbig
+  assert.equal(prov.status, 2);
+  const cur = await client.lookupById("0a3f5090-0ebe-32b8-e044-0003ba298018", { type: "husnummer" }); // Akseltorv 1
+  assert.equal(cur.status, 3);
+  const hits = await client.search({ text: "Landemærket 27", maxResults: 20 });
+  assert.ok(hits.length && hits.every((h) => !("status" in h)), "KDS now sends status on search hits: update README");
+});

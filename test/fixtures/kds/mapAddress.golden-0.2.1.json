@@ -1,0 +1,222 @@
+{
+  "adresse-floor-door": {
+    "id": "0a3f509d-db78-32b8-e044-0003ba298018",
+    "type": "adresse",
+    "address": "Edvard Thomsens Vej 87, 5. th, 2300 København S",
+    "street": "Edvard Thomsens Vej",
+    "house_number": "87",
+    "floor": "5",
+    "door": "th",
+    "zip": "2300",
+    "city": "København S",
+    "subcity": null,
+    "municipality_code": 101,
+    "municipality_name": "København",
+    "way_code": 1442,
+    "position": {
+      "type": "Point",
+      "coordinates": [
+        12.57946311,
+        55.63249394
+      ]
+    }
+  },
+  "adresse-floor-only": {
+    "id": "0a3f50bb-f9ac-32b8-e044-0003ba298018",
+    "type": "adresse",
+    "address": "Fredericiagade 16, st., 6000 Kolding",
+    "street": "Fredericiagade",
+    "house_number": "16",
+    "floor": "st",
+    "door": null,
+    "zip": "6000",
+    "city": "Kolding",
+    "subcity": null,
+    "municipality_code": 621,
+    "municipality_name": "Kolding",
+    "way_code": 2555,
+    "position": {
+      "type": "Point",
+      "coordinates": [
+        9.4787057,
+        55.49097324
+      ]
+    }
+  },
+  "adresse-status2-provisional": {
+    "id": "b396f3ab-d179-45e5-80b3-618eb5d60e4a",
+    "type": "adresse",
+    "address": "Landemærket 27F, 1119 København K",
+    "street": "Landemærket",
+    "house_number": "27F",
+    "floor": null,
+    "door": null,
+    "zip": "1119",
+    "city": "København K",
+    "subcity": null,
+    "municipality_code": 101,
+    "municipality_name": "København",
+    "way_code": 4100,
+    "position": {
+      "type": "Point",
+      "coordinates": [
+        12.57712912,
+        55.68260314
+      ]
+    }
+  },
+  "adresse-status3-plain": {
+    "id": "0251159a-6416-4d4b-937a-ef788240ebe6",
+    "type": "adresse",
+    "address": "Fredericiagade 16, 6000 Kolding",
+    "street": "Fredericiagade",
+    "house_number": "16",
+    "floor": null,
+    "door": null,
+    "zip": "6000",
+    "city": "Kolding",
+    "subcity": null,
+    "municipality_code": 621,
+    "municipality_name": "Kolding",
+    "way_code": 2555,
+    "position": {
+      "type": "Point",
+      "coordinates": [
+        9.4787057,
+        55.49097324
+      ]
+    }
+  },
+  "adresse-subcity": {
+    "id": "0a3f50b1-ff45-32b8-e044-0003ba298018",
+    "type": "adresse",
+    "address": "Landemærket 27, Rønne, 3700 Rønne",
+    "street": "Landemærket",
+    "house_number": "27",
+    "floor": null,
+    "door": null,
+    "zip": "3700",
+    "city": "Rønne",
+    "subcity": "Rønne",
+    "municipality_code": 400,
+    "municipality_name": "Bornholm",
+    "way_code": 2307,
+    "position": {
+      "type": "Point",
+      "coordinates": [
+        14.70610569,
+        55.10276354
+      ]
+    }
+  },
+  "handcrafted-adresse-status4-retired": {
+    "id": "b396f3ab-d179-45e5-80b3-618eb5d60e4a",
+    "type": "adresse",
+    "address": "Landemærket 27F, 1119 København K",
+    "street": "Landemærket",
+    "house_number": "27F",
+    "floor": null,
+    "door": null,
+    "zip": "1119",
+    "city": "København K",
+    "subcity": null,
+    "municipality_code": 101,
+    "municipality_name": "København",
+    "way_code": 4100,
+    "position": {
+      "type": "Point",
+      "coordinates": [
+        12.57712912,
+        55.68260314
+      ]
+    }
+  },
+  "handcrafted-husnummer-status5-henlagt": {
+    "id": "0a3f5090-0ebe-32b8-e044-0003ba298018",
+    "type": "adgangsadresse",
+    "address": "Akseltorv 1, 6000 Kolding",
+    "street": "Akseltorv",
+    "house_number": "1",
+    "floor": null,
+    "door": null,
+    "zip": "6000",
+    "city": "Kolding",
+    "subcity": null,
+    "municipality_code": 621,
+    "municipality_name": "Kolding",
+    "way_code": 230,
+    "position": {
+      "type": "Point",
+      "coordinates": [
+        9.47328295,
+        55.49036315
+      ]
+    }
+  },
+  "husnummer-status2-provisional": {
+    "id": "000a8fad-b0c1-4169-8289-134847bf908e",
+    "type": "adgangsadresse",
+    "address": "Landemærket 27F, 1119 København K",
+    "street": "Landemærket",
+    "house_number": "27F",
+    "floor": null,
+    "door": null,
+    "zip": "1119",
+    "city": "København K",
+    "subcity": null,
+    "municipality_code": 101,
+    "municipality_name": "København",
+    "way_code": 4100,
+    "position": {
+      "type": "Point",
+      "coordinates": [
+        12.57712912,
+        55.68260314
+      ]
+    }
+  },
+  "husnummer-status3": {
+    "id": "0a3f5090-0ebe-32b8-e044-0003ba298018",
+    "type": "adgangsadresse",
+    "address": "Akseltorv 1, 6000 Kolding",
+    "street": "Akseltorv",
+    "house_number": "1",
+    "floor": null,
+    "door": null,
+    "zip": "6000",
+    "city": "Kolding",
+    "subcity": null,
+    "municipality_code": 621,
+    "municipality_name": "Kolding",
+    "way_code": 230,
+    "position": {
+      "type": "Point",
+      "coordinates": [
+        9.47328295,
+        55.49036315
+      ]
+    }
+  },
+  "husnummer-subcity": {
+    "id": "0a3f508d-b070-32b8-e044-0003ba298018",
+    "type": "adgangsadresse",
+    "address": "Rudholmvej 4, Søhale, 6715 Esbjerg N",
+    "street": "Rudholmvej",
+    "house_number": "4",
+    "floor": null,
+    "door": null,
+    "zip": "6715",
+    "city": "Esbjerg N",
+    "subcity": "Søhale",
+    "municipality_code": 561,
+    "municipality_name": "Esbjerg",
+    "way_code": 6533,
+    "position": {
+      "type": "Point",
+      "coordinates": [
+        8.57460557,
+        55.5462103
+      ]
+    }
+  }
+}

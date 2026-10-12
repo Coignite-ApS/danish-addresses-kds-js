@@ -1,0 +1,24 @@
+{
+  "source": "GET /husnumre/soeg?tekst=Rudholmvej%204&maksimum=3&medtagForeloebige=true",
+  "recorded": "2026-10-12",
+  "body": {
+    "status": "ok",
+    "beskrivelse": "",
+    "fund": [
+      {
+        "type": "husnummer",
+        "id": "0a3f508d-b070-32b8-e044-0003ba298018",
+        "titel": "Rudholmvej 4, Søhale, 6715 Esbjerg N",
+        "vejnavn": "Rudholmvej",
+        "husnummer": "4"
+      },
+      {
+        "type": "husnummer",
+        "id": "0a3f508e-1a8a-32b8-e044-0003ba298018",
+        "titel": "Rudholmvej 41, Roust, 6818 Årre",
+        "vejnavn": "Rudholmvej",
+        "husnummer": "41"
+      }
+    ]
+  }
+}

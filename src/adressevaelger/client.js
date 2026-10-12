@@ -42,7 +42,8 @@ export function createClient(opts = {}) {
   /**
    * Search. `resource` is 'adresser' (full addresses incl. floor/door) or 'husnumre' (access addresses).
    * Provide EITHER `tekst` (free-text) OR `vejnavn` (structured; required for husnummer/postnummer/etage/doer).
-   * Returns the raw `fund[]` rows (minimal: id, type, titel, ...).
+   * Returns the raw `fund[]` rows (minimal: id, type, titel, ...), untouched. KDS sends no `status` on hits
+   * (verified 2026-10-12); if it ever does, it passes through as-is (string, as KDS sends it).
    */
   // English option names are canonical; the Danish API names are accepted as aliases (KDS-doc parity).
   // resource: 'addresses' (full addresses, incl. floor/door) | 'accessAddresses' (house numbers).
@@ -91,6 +92,7 @@ export function createClient(opts = {}) {
 /**
  * Map an id-lookup response (nested DAR) to a flat, normalized address object.
  * `/adresser/{id}` wraps `{ adresse: { husnummer: {...} } }`; `/husnumre/{id}` is the husnummer directly.
+ * `status` (since 0.3.0) is the DAR status number of the adresse resp. husnummer; it is the last key.
  */
 export function mapAddress(resp) {
   const isAdr = resp.adresse !== undefined;
@@ -114,5 +116,13 @@ export function mapAddress(resp) {
     municipality_name: kommuneNavn(municipality_code),
     way_code: kd.vejkode != null ? parseInt(kd.vejkode, 10) : null,
     position: k ? { type: "Point", coordinates: utm32ToWgs84(k.x, k.y) } : null,
+    // DAR status of the record itself (adresse.status / husnummer.status), NOT the response's top-level "ok".
+    // 2 foreløbig, 3 gældende, 4 nedlagt, 5 henlagt. null when absent or not numeric.
+    status: darStatus(isAdr ? a : h),
   };
+}
+
+function darStatus(rec) {
+  const n = rec && rec.status != null ? parseInt(rec.status, 10) : NaN;
+  return Number.isFinite(n) ? n : null;
 }
