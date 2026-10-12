@@ -1,6 +1,6 @@
 {
   "name": "@coignite/danish-addresses-kds-js",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Klimadatastyrelsen (KDS) Adressevælger client + framework-agnostic address autocomplete (DAWA replacement).",
   "type": "module",
   "main": "./dist/index.mjs",

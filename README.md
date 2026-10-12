@@ -53,6 +53,23 @@ an implicit wildcard (no `fuzzy` toggle exists — it is always on).
 `municipalityCode` (single/array/comma), `maxResults` (≤200), `includeProvisional`. `client.lookupById(id,{type})`
 / `client.resolve(id)` cover the id-lookup endpoints.
 
+**`mapAddress` / `lookupById` result** — `{ id, type, address, street, house_number, floor, door, zip, city,
+subcity, municipality_code, municipality_name, way_code, position, status }`. `status` (since 0.3.0, always the
+last key) is the DAR status of the record itself — `adresse.status` for an adresse, `husnummer.status` for an
+adgangsadresse — as a number, or `null` when the record has none:
+
+| `status` | DAR meaning |
+|---|---|
+| `2` | foreløbig (provisional) |
+| `3` | gældende (current) |
+| `4` | nedlagt (retired) |
+| `5` | henlagt (shelved) |
+
+`search` returns the raw KDS `fund` rows untouched. KDS does **not** send `status` on search hits (verified
+2026-10-12: `/adresser/soeg` rows are `{type, id, titel, husnummerId}`, `/husnumre/soeg` rows
+`{type, id, titel, vejnavn, husnummer}`); if it ever does, it passes through as KDS sends it. To tell a
+provisional hit from a current one today, look it up by id.
+
 **`createAutocomplete(client, opts)`**
 
 | option | default | purpose |
@@ -88,7 +105,8 @@ above (`token`, `baseUrl`, `municipalityCode`, `accessAddressOnly`, `minLength`,
 ```bash
 npm install
 npm run build       # dist/index.mjs (ESM)  +  dist/affaldsshop-checkout.<ver>.js (IIFE for WP)
-npm test            # deterministic: pure helpers + controller (mocked client, no network)
+npm test            # deterministic: pure helpers + controller (mocked client) + golden suite on recorded
+                    # KDS responses in test/fixtures/kds (no network)
 npm run test:live   # smoke test against the live API (network)
 ```
 
